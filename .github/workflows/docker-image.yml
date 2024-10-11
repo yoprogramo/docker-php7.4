@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-    - run: docker login -u ${{ vars.DR_USER }} -p ${{ secrets.DR_PASS }} https://hub.docker.com
-    - run: docker compose build && docker compose push
+      - uses: actions/checkout@v4
+      - run: docker login -u ${{ vars.DR_USER }} -p ${{ secrets.DR_PASS }} https://hub.docker.com
+      - run: docker compose build && docker compose push
