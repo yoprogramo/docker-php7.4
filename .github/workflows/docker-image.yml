@@ -14,5 +14,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: docker login -u ${{ vars.DR_USER }} -p ${{ secrets.DR_PASS }} https://hub.docker.com
+      - run: docker login -u ${{ vars.DR_USER }} -p ${{ secrets.DR_PASS }}
       - run: docker compose build && docker compose push
